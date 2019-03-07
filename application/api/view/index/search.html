@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fuzzy-Search</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 110px auto;
+        }
+        .search {
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!--<h3><b>模糊查询</b></h3>-->
+    <form action="{:url('index/getKeyWord')}" method="post">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="form-group">
+                    <label for="keyword">用户模糊查询</label>
+                    <input type="text" class="form-control" id="keyword" name="keyword" placeholder="User">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-default search">查询</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
